@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Start() {
+export default function App() {
   return (
       <div className="App">
         <h1>Hello React <i className="fa-solid fa-handshake"></i></h1>
