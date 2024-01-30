@@ -1,11 +1,26 @@
-import React from "react";
+import React from 'react'
+import { HashRouter, Routes, Route } from "react-router-dom"
+
+import InitialPage from './pages/InitialPage'
+import Cook from './pages/Cook'
+import Shop from './pages/Shop'
+import Cupboard from './pages/Cupboard'
+ 
+import Layout from './components/Layout'
 
 export default function App() {
+
   return (
-      <div className="App">
-        <h1>Hello React <i className="fa-solid fa-handshake"></i></h1>
-      </div>
-  );
+    <HashRouter>
+      <Routes>
+        <Route index element={<InitialPage />}/>
+        <Route path="/" element={<Layout />}>
+          <Route path="/cook" element={<Cook />}/>
+          <Route path="/shop" element={<Shop />}/>
+          <Route path="/cupboard" element={<Cupboard />}/>
+        </Route>
+      </Routes>
+    </HashRouter>
+  )
 }
 
-// this is the same as App.js in CRA
