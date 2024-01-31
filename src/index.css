@@ -1,22 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
-
 
 @font-face {
   font-family: "Minion Pro";
-  src: url("src/assets/fonts/MinionPro/MinionPro-Regular.otf")
+  src: url('/assets/fonts/MinionPro/MinionPro-Regular.otf')
 }
 
 @font-face {
   font-family: "Din Condensed";
-  src: url("src/assets/fonts/DinCondensed/D-DINCondensed.otf")
+  src: url("/assets/fonts/DinCondensed/D-DINCondensed.otf")
 }
 
 @font-face {
   font-family: "din-1451-lt-pro-engschrift";
-  src: url("src/assets/fonts/DIN1451StdEngschrift/DIN1451StdEngschrift.otf")
+  src: url("/assets/fonts/DIN1451StdEngschrift/DIN1451StdEngschrift.otf")
 }
 
 *,
@@ -76,7 +72,7 @@ nav a:hover {
 }
 
 input,select {
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Fira Mono', monospace;
   color: #5c5b5b;
   outline: none;
 }
