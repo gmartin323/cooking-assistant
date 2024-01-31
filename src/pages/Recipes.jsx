@@ -14,20 +14,43 @@ export default function Recipes() {
       setLoading(true)
       try {
         const data = await getRecipes()
-        setRecipes(data)
+
+        const sortedRecipes = data.sort(function(a, b) {
+
+          const recipeA = a.name.toLowerCase()
+          const recipeB = b.name.toLowerCase()
+
+          if (recipeA < recipeB) {
+            return -1
+          } else if (recipeB > recipeB) {
+            return 1
+          } else {
+            return 0
+          }
+        })
+
+        setRecipes(sortedRecipes)
       } catch (err) {
         setError(err)
       } finally {
         setLoading(false)
       }
     }
-    setRecipes(getRecipes)
+    
+    // setRecipes(getRecipes)
 
     loadRecipes()
 
     
   }, [])
 
+  if (loading) {
+    return <h1>Loading...</h1>
+  }
+
+  if (error) {
+    return <h1>There was an error: {error.message}</h1>
+  } 
 
   return (
     <div className='page-container'>
