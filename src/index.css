@@ -5,9 +5,14 @@
   src: url('MinionPro-Regular.otf')
 }
 
-@font-face {
+/* @font-face {
   font-family: "Din Condensed";
   src: url('D-DINCondensed.otf')
+} */
+
+@font-face {
+  font-family: "Din Condensed";
+  src: url('C:/Users/Admin/Documents/Dev/Projects/Cooking Assistant/public/fonts/DINCondensed/D-DINCondensed.ttf')
 }
 
 @font-face {
