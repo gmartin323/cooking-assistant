@@ -77,7 +77,15 @@ nav a:hover {
 
 .page-container {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
   margin: 2rem;
+}
+
+/* RECIPE PAGE */
+
+.recipe-card-img {
+  max-width: 200px;
 }
 
 /* INPUTS */
@@ -150,6 +158,10 @@ input[type=text]:focus ,textarea:focus{
   font-family: 'Fira Mono', monospace;
 }
 
+.img {
+  display: cover;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 550px) {
@@ -157,6 +169,7 @@ input[type=text]:focus ,textarea:focus{
     flex-direction: column;
     height: 3.6rem;
   }
+  
   nav {
     padding: 2px;
     margin: 0;
