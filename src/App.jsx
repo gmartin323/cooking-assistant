@@ -13,8 +13,8 @@ export default function App() {
   return (
     <HashRouter>
       <Routes>
-        <Route index element={<InitialPage />}/>
         <Route path="/" element={<Layout />}>
+          <Route index element={<InitialPage />}/>
           <Route path="/cook" element={<Cook />}/>
           <Route path="/shop" element={<Shop />}/>
           <Route path="/cupboard" element={<Cupboard />}/>

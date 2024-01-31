@@ -1,20 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+
+
+@font-face {
+  font-family: "Minion Pro";
+  src: url(src/assets/fonts/MinionPro/MinionPro-Regular.otf)
+}
+
+@font-face {
+  font-family: "Din Condensed";
+  src: url(src/assets/fonts/DinCondensed/D-DINCondensed.ttf)
+}
+
+@font-face {
+  font-family: "din-1451-lt-pro-engschrift";
+  src: url(src/assets/fonts/DIN1451StdEngschrift/DIN1451StdEngschrift.otf)
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Poppins',sans-serif;
+  font-family: 'Minion Pro', serif;
 }
 
 body {
   width: 100%;
-  height: 100vh;
+  background-color: #FFFEF7;;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  margin: auto;
+  background-color: #1a2d40;
+  font-family: 'Din Condensed', sans-serif;
+  /* font-family: 'din-1451-lt-pro-engschrift', sans-serif; */
+  
+}
+
+nav {
+  margin-left: auto;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 5px 20px;
+}
+
+nav a:hover {
+  color: #9CB7C6;
+}
+
+.nav-divider {
+  color: #9CB7C6;
+  font-size: 1.2rem;
+}
+
+.site-wrapper {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  min-height: 100vh;
 }
 
 input,select {
@@ -22,8 +80,65 @@ input,select {
   color: #5c5b5b;
   outline: none;
 }
+
 input[type=text]:focus ,textarea:focus{
   outline: none !important;
   border: 1px solid #555;
   transition: .5s;
+}
+
+/* LOADING SPINNER */
+
+
+.spinner-container {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spinner {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 8px solid #fdd1bf;
+  border-top: 8px solid #ff9a83;
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+/* UTILITY */
+
+.new-line {
+  white-space: pre-line;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: #D7DCDE;
+  color: whitesmoke;
+}
+
+.selected {
+  background-color: #FF0051;
+  color: #fcf5eb;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.monospace-font {
+  font-family: 'Fira Mono', monospace;
 }
