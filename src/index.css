@@ -6,17 +6,17 @@
 
 @font-face {
   font-family: "Minion Pro";
-  src: url(src/assets/fonts/MinionPro/MinionPro-Regular.otf)
+  src: url("src/assets/fonts/MinionPro/MinionPro-Regular.otf")
 }
 
 @font-face {
   font-family: "Din Condensed";
-  src: url(src/assets/fonts/DinCondensed/D-DINCondensed.otf)
+  src: url("src/assets/fonts/DinCondensed/D-DINCondensed.otf")
 }
 
 @font-face {
   font-family: "din-1451-lt-pro-engschrift";
-  src: url(src/assets/fonts/DIN1451StdEngschrift/DIN1451StdEngschrift.otf)
+  src: url("src/assets/fonts/DIN1451StdEngschrift/DIN1451StdEngschrift.otf")
 }
 
 *,
