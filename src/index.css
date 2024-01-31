@@ -2,13 +2,8 @@
 
 @font-face {
   font-family: "Minion Pro";
-  src: url('MinionPro-Regular.otf')
+  src: url('/fonts/MinionPro/MinionPro-Regular.otf')
 }
-
-/* @font-face {
-  font-family: "Din Condensed";
-  src: url('D-DINCondensed.otf')
-} */
 
 @font-face {
   font-family: "Din Condensed";
@@ -17,7 +12,7 @@
 
 @font-face {
   font-family: "din-1451-lt-pro-engschrift";
-  src: url("public/fonts/DIN1451StdEngschrift/DIN1451StdEngschrift.otf")
+  src: url("/fonts/DIN1451StdEngschrift/DIN1451StdEngschrift.otf")
 }
 
 *,
