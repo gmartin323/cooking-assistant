@@ -47,7 +47,7 @@ header {
   height: 3rem;
   margin: auto;
   background-color: #1a2d40;
-  font-family: 'Din Condensed', 'Minion Pro', sans-serif;
+  font-family: 'Din Condensed', sans-serif;
   /* font-family: 'din-1451-lt-pro-engschrift', sans-serif; */
   
 }
@@ -79,24 +79,95 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin: 2rem;
+}
+
+.page-heading {
+  padding-top: 2rem;
+  margin-left: 2rem;
 }
 
 /* RECIPE PAGE */
 
+.recipe-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto; 
+}
+
+.recipe-card {
+  /* border: grey dashed 2px; */
+  /* width: 88vw; */
+  margin: 1rem 2rem;
+  font-family: Din Condensed;
+  /* font-family: Fira Mono; */
+}
+
 .recipe-card-img {
-  max-width: 200px;
+  max-width: 100%;
+}
+
+.recipe-card-info {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr 1fr;
+  grid-template-rows: 1.5rem 3.4rem 1rem;
+  grid-template-areas: 
+    "name name name"
+    "info info info"
+    "prep cook serves"
+  ;
+  color: #2C3B4B;
+  padding: 0.5rem 0 0.75rem 0;
+  border-bottom: 1px solid #e7e4d3;
+  /* border-bottom-color: linear-gradient(90deg, rgba(255,255,255,1) 15%, rgba(231,228,211,1) 50%, rgba(255,255,255,0) 85%);; */
+}
+
+.recipe-card-name {
+  grid-area: name;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.recipe-card-extra-info {
+  grid-area: info;
+  font-size: 1rem;
+  /* color: #5A6D82; */
+}
+
+.recipe-card-preptime,
+.recipe-card-cooktime,
+.recipe-card-serves {
+  font-size: 1rem;
+  align-self: end;
+  color: #5A6D82;
+  color: #1A2D40;
+}
+
+.recipe-card-preptime {
+  grid-area: prep;
+}
+
+.recipe-card-cooktime {
+  grid-area: cook;
+  padding-top: 1.2rem;
+  border-top: 1px solid #e7e4d3;
+}
+
+.recipe-card-serves {
+  grid-area: serves;
 }
 
 /* INPUTS */
 
-input,select {
+input, select {
   font-family: 'Fira Mono', monospace;
   color: #5c5b5b;
   outline: none;
 }
 
-input[type=text]:focus ,textarea:focus{
+input[type=text]:focus, textarea:focus{
   outline: none !important;
   border: 1px solid #555;
   transition: .5s;
@@ -177,5 +248,19 @@ input[type=text]:focus ,textarea:focus{
 
   nav a {
     font-size: 0.9rem;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .recipe-card-container {
+    flex-direction: row;
+  }
+
+  .recipe-card {
+    max-width: 250px;
+  }
+
+  .recipe-card-img {
+    max-width: 250px;
   }
 }
