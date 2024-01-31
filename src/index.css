@@ -111,7 +111,7 @@ nav a:hover {
 .recipe-card-info {
   display: grid;
   grid-template-columns: 1fr 0.7fr 1fr;
-  grid-template-rows: 1.5rem 3.4rem 1rem;
+  grid-template-rows: 1.5rem 2.2rem 1rem;
   grid-template-areas: 
     "name name name"
     "info info info"
@@ -151,7 +151,7 @@ nav a:hover {
 
 .recipe-card-cooktime {
   grid-area: cook;
-  padding-top: 1.2rem;
+  padding-top: 0.6rem;
   border-top: 1px solid #e7e4d3;
 }
 
