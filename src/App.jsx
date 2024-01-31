@@ -2,6 +2,7 @@ import React from 'react'
 import { HashRouter, Routes, Route } from "react-router-dom"
 
 import InitialPage from './pages/InitialPage'
+import Recipes from './pages/Recipes'
 import Cook from './pages/Cook'
 import Shop from './pages/Shop'
 import Cupboard from './pages/Cupboard'
@@ -15,6 +16,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<InitialPage />}/>
+          <Route path="/recipes" element={<Recipes />}/>
           <Route path="/cook" element={<Cook />}/>
           <Route path="/shop" element={<Shop />}/>
           <Route path="/cupboard" element={<Cupboard />}/>

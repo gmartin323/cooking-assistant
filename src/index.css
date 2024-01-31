@@ -32,6 +32,15 @@ body {
   background-color: #FFFEF7;;
 }
 
+.site-wrapper {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  min-height: 100vh;
+}
+
+/* HEADER/NAV */
+
 header {
   display: flex;
   align-items: center;
@@ -64,12 +73,14 @@ nav a:hover {
   font-size: 1.2rem;
 }
 
-.site-wrapper {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  min-height: 100vh;
+/* PAGES */
+
+.page-container {
+  display: flex;
+  margin: 2rem;
 }
+
+/* INPUTS */
 
 input,select {
   font-family: 'Fira Mono', monospace;
@@ -137,4 +148,21 @@ input[type=text]:focus ,textarea:focus{
 
 .monospace-font {
   font-family: 'Fira Mono', monospace;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 550px) {
+  header {
+    flex-direction: column;
+    height: 3.6rem;
+  }
+  nav {
+    padding: 2px;
+    margin: 0;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+  }
 }

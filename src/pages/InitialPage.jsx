@@ -5,15 +5,14 @@ import CheckCupboard from '../components/CheckCupboard'
  
 export default function InitialPage() {
   return (
-    <div className="site-wrapper">
-      <div className="choice-container">
+    <div className='page-container'>
+      <h1>Homepage</h1>
+      {/* <div className="choice-container">
         <Link to="/cook">Cook</Link>
         <Link to="/shop">Shop</Link>
       </div>
       <AddToCupboardBtn />
-      <CheckCupboard />
+      <CheckCupboard /> */}
     </div>
-
-
   )
 }
