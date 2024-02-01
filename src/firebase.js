@@ -28,8 +28,3 @@ export async function getRecipes() {
   }))
   return recipes
 }
-
-export async function getRecipe(recipeUrl) {
-  const snapshot = await getDoc()
-  const recipe = snapshot.doc
-}

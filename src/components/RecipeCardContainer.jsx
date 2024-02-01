@@ -1,19 +1,21 @@
 import React from "react";
 import RecipeCard from "./RecipeCard";
+import { RecipeDataContext } from '../App'
 
-export default function RecipeCardContainer( props ) {
+export default function RecipeCardContainer() {
+
+  const recipes = React.useContext(RecipeDataContext)
 
   return (
-
-  <section className='recipe-card-container'>
-    {props.recipes.map((recipe) => {
-      return (
-        <RecipeCard 
-          recipe={recipe}
-          key={recipe.id}
-        />
-      )
-    })}
-  </section>
+    <section className='recipe-card-container'>
+      {recipes.map((recipe) => {
+        return (
+          <RecipeCard 
+            recipe={recipe}
+            key={recipe.id}
+          />
+        )
+      })}
+    </section>
   )
 } 
