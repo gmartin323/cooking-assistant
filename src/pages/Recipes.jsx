@@ -3,6 +3,7 @@ import { getRecipes } from '../firebase'
 import sortByName from '../utilities/sortByName'
 
 import RecipeCardContainer from '../components/RecipeCardContainer'
+import LoadingSpinner from '../components/LoadingSpinner'
 
 export default function Recipes() {
 
@@ -28,7 +29,7 @@ export default function Recipes() {
   }, [])
 
   if (loading) {
-    return <h1>Loading...</h1>
+    return <div className='page-container'><LoadingSpinner /></div>
   }
 
   if (error) {

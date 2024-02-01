@@ -1,27 +1,33 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
 import { HashRouter, Routes, Route } from "react-router-dom"
 
-import InitialPage from './pages/InitialPage'
-import Recipes from './pages/Recipes'
-import Cook from './pages/Cook'
-import Shop from './pages/Shop'
-import Cupboard from './pages/Cupboard'
- 
+const InitialPage = lazy(()=> import ('./pages/InitialPage'))
+const Recipes = lazy(()=> import ('./pages/Recipes'))
+const Recipe = lazy(()=> import ('./pages/Recipe'))
+const Cook = lazy(()=> import ('./pages/Cook'))
+const Shop = lazy(()=> import ('./pages/Shop'))
+const Cupboard = lazy(()=> import ('./pages/Cupboard'))
+
 import Layout from './components/Layout'
+import LoadingSpinner from './components/LoadingSpinner'
 
 export default function App() {
 
   return (
     <HashRouter>
+          <Suspense fallback={<div className='page-container'><LoadingSpinner /></div>}>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<InitialPage />}/>
-          <Route path="/recipes" element={<Recipes />}/>
-          <Route path="/cook" element={<Cook />}/>
-          <Route path="/shop" element={<Shop />}/>
-          <Route path="/cupboard" element={<Cupboard />}/>
+            <Route index element={<InitialPage />}/>
+            <Route path="/recipes" element={<Recipes />}/>
+            <Route path="/recipes/:name" element={<Recipe />}/>
+            {/* <Route path="/recipes/:name/:id" element={<Recipe />}/>  */}
+            <Route path="/cook" element={<Cook />}/>
+            <Route path="/shop" element={<Shop />}/>
+            <Route path="/cupboard" element={<Cupboard />}/>
         </Route>
       </Routes>
+          </Suspense>
     </HashRouter>
   )
 }
