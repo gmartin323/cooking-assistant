@@ -79,6 +79,7 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 2rem;
 }
 
 .page-heading {
@@ -86,7 +87,7 @@ nav a:hover {
   margin-left: 2rem;
 }
 
-/* RECIPE PAGE */
+/* RECIPES PAGE */
 
 .recipe-card-container {
   display: flex;
@@ -99,8 +100,9 @@ nav a:hover {
 .recipe-card {
   /* border: grey dashed 2px; */
   /* width: 88vw; */
-  margin: 1rem 2rem;
+  margin-bottom: 2rem;
   font-family: Din Condensed;
+  text-align: center;
   /* font-family: Fira Mono; */
 }
 
@@ -162,6 +164,20 @@ nav a:hover {
 .recipe-card-serves {
   grid-area: serves;
 }
+
+/* RECIPE PAGE */
+
+.ingredients-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.ingredient {
+  display: flex;
+  gap: 0.5rem;
+}
+
+
 
 /* INPUTS */
 
