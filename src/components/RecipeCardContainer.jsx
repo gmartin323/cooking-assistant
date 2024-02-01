@@ -7,8 +7,6 @@ export default function RecipeCardContainer( props ) {
 
   <section className='recipe-card-container'>
     {props.recipes.map((recipe) => {
-      
-      
       return (
         <RecipeCard 
           recipe={recipe}

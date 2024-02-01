@@ -1,5 +1,6 @@
 import React from 'react'
 import { getRecipes } from '../firebase'
+import sortByName from '../utilities/sortByName'
 
 import RecipeCardContainer from '../components/RecipeCardContainer'
 
@@ -14,33 +15,15 @@ export default function Recipes() {
       setLoading(true)
       try {
         const data = await getRecipes()
-
-        const sortedRecipes = data.sort(function(a, b) {
-
-          const recipeA = a.name.toLowerCase()
-          const recipeB = b.name.toLowerCase()
-
-          if (recipeA < recipeB) {
-            return -1
-          } else if (recipeB > recipeB) {
-            return 1
-          } else {
-            return 0
-          }
-        })
-
-        setRecipes(sortedRecipes)
+        setRecipes(sortByName(data))
       } catch (err) {
         setError(err)
       } finally {
         setLoading(false)
       }
     }
-    
-    // setRecipes(getRecipes)
 
     loadRecipes()
-
     
   }, [])
 
@@ -55,9 +38,7 @@ export default function Recipes() {
   return (
     <div className='page-container'>
       <h1 className="page-heading">Recipes</h1>
-        {recipes[0] &&  
-          <RecipeCardContainer recipes={recipes} />    
-      }
+        <RecipeCardContainer recipes={recipes} />
     </div>
   )
 }
