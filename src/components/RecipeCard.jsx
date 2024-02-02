@@ -12,7 +12,7 @@ export default function RecipeCard( { recipe } ) {
         aria-label={`View ${name} recipe`}
         className='recipe-card-link'
       >
-        <img className='recipe-card-img' src={imageurl} alt={`Image of ${name} dish`} />
+        <img className='recipe-card-img' ou  src={imageurl} alt={`Image of ${name} dish`} />
         <div className='recipe-card-info'>
           <p className='recipe-card-name'> {name}</p>
           <p className='recipe-card-extra-info'> with {extra_info}</p>

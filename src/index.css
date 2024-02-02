@@ -78,13 +78,11 @@ nav a:hover {
 .page-container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding: 2rem;
+  padding: 1rem 2rem;
 }
 
 .page-heading {
-  padding-top: 2rem;
-  margin-left: 2rem;
+  padding-bottom: 2rem;
 }
 
 /* RECIPES PAGE */
@@ -117,7 +115,7 @@ nav a:hover {
 .recipe-card-info {
   display: grid;
   grid-template-columns: 1fr 0.7fr 1fr;
-  grid-template-rows: 1.5rem 2.2rem 1rem;
+  grid-template-rows: 1.5rem 2.5rem 1rem;
   grid-template-areas: 
     "name name name"
     "info info info"
@@ -169,16 +167,61 @@ nav a:hover {
 
 .ingredients-list-container {
   display: flex;
+  margin: 0;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Din Condensed;
+  text-transform: uppercase;
+}
+
+.ingredient-list-heading {
+  border-top: 3px solid #2C3B4B;
+  border-bottom: 1px solid #e7e4d3;
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 0.5rem 0;
+  letter-spacing: 0.5px;
+  line-height: 1rem;
+}
+
+.ingredient-list {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 13px;
 }
 
 .ingredient {
   display: flex;
-  gap: 0.5rem;
+  width: 100%;
+  column-gap: 5px;
+  border-bottom: 1px solid #e7e4d3;
+  
 }
 
+.ingredient-quantity {
+  display: flex;
+  align-items: center;
+  min-width: 90px;
+  
+  padding: 0.625rem;
+  border-right: 1px solid #e7e4d3;
+  font-size: 0.875rem;
+  /* text-transform: lowercase; */
+}
 
+.ingredient-name {
+  border-left: 1px solid #e7e4d3;
+  /* width: auto; */
+  font-size: 0.813rem;
+  padding: 0.625rem;
+}
 
+.ingredient-instruction {
+  text-transform: lowercase;
+  font-size: 0.75rem; 
+}
 /* INPUTS */
 
 input, select {
