@@ -16,6 +16,7 @@ export default function Recipe() {
 
   return (
     <div className='page-container'>
+      
       <RecipeCard recipe={currentRecipe} />
       <IngredientsList ingredients={currentRecipe.ingredients} />
       <RecipePageDirections directions={currentRecipe.steps} />

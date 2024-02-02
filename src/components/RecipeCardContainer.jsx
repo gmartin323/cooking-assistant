@@ -1,6 +1,7 @@
 import React from "react";
-import RecipeCard from "./RecipeCard";
+import { Link } from "react-router-dom";
 import { RecipeDataContext } from '../App'
+import RecipeCard from "./RecipeCard";
 
 export default function RecipeCardContainer() {
 
@@ -10,10 +11,16 @@ export default function RecipeCardContainer() {
     <section className='recipe-card-container'>
       {recipes.map((recipe) => {
         return (
-          <RecipeCard 
-            recipe={recipe}
-            key={recipe.id}
-          />
+          <Link 
+            to={`/recipes/${recipe.recipeUrl}`} 
+            aria-label={`View ${recipe.name} recipe`}
+            className='recipe-card-link'
+          >
+            <RecipeCard 
+              recipe={recipe}
+              key={recipe.id}
+            />
+          </Link>
         )
       })}
     </section>
