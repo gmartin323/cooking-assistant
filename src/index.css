@@ -114,7 +114,7 @@ nav a:hover {
 
 .recipe-card-info {
   display: grid;
-  grid-template-columns: 1fr 0.7fr 1fr;
+  grid-template-columns: 1fr 0.9fr 1fr;
   grid-template-rows: 1.5rem 2.5rem 1rem;
   grid-template-areas: 
     "name name name"
@@ -222,6 +222,11 @@ nav a:hover {
   text-transform: lowercase;
   font-size: 0.75rem; 
 }
+
+/* RECIPE-PAGE-DIRECTIONS */
+
+
+
 /* INPUTS */
 
 input, select {

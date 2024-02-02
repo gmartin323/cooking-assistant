@@ -4,6 +4,7 @@ import { RecipeDataContext } from '../App'
 
 import RecipeCard from '../components/RecipeCard'
 import IngredientsList from '../components/IngredientsList'
+import RecipePageDirections from '../components/RecipePageDirections'
 
 export default function Recipe() {
 
@@ -17,6 +18,7 @@ export default function Recipe() {
     <div className='page-container'>
       <RecipeCard recipe={currentRecipe} />
       <IngredientsList ingredients={currentRecipe.ingredients} />
+      <RecipePageDirections directions={currentRecipe.steps} />
     </div>
   )
 }

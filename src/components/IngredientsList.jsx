@@ -8,11 +8,11 @@ export default function IngredientsList( { ingredients } ) {
       <ul className='ingredients-list'></ul>
       {ingredients.map((ingredient)=> {
         return (
-          <div className='ingredient'>
+          <li key={ingredient.name} className='ingredient'>
             <p className='ingredient-quantity'>{ingredient.quantity}</p>
             <p className='ingredient-name'>{ingredient.name}{ingredient.instruction ? ", " : ""}<span className='ingredient-instruction'>{ingredient.instruction}
               </span></p>
-          </div>
+          </li>
         )
       })}    
     </section>
