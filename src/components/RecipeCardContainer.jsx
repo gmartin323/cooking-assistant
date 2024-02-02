@@ -15,10 +15,10 @@ export default function RecipeCardContainer() {
             to={`/recipes/${recipe.recipeUrl}`} 
             aria-label={`View ${recipe.name} recipe`}
             className='recipe-card-link'
+            key={recipe.id}
           >
             <RecipeCard 
               recipe={recipe}
-              key={recipe.id}
             />
           </Link>
         )
