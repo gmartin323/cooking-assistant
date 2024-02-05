@@ -1,7 +1,4 @@
 import React from 'react'
-
-
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom'
 
 export default function GoBackBtn( {text} ) {
