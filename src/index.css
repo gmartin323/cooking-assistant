@@ -256,9 +256,7 @@ nav a:hover {
 
 .recipe-page-directions-list {
   font-size: 1rem;
-  list-style-type: none;
-  /* line-height: 1rem; */
-  /* letter-spacing: 13px; */
+  list-style-type: none;  
 }
 
 .recipe-page-direction {
@@ -266,23 +264,33 @@ nav a:hover {
   width: 100%;
   column-gap: 5px;
   border-bottom: 1px solid #e7e4d3;
+  border-left: 3px solid #FFFEF7;
 }
+
+
 
 .direction-number {
   display: flex;
   align-items: center;
-  min-width: 40px;
-  
+  min-width: 35px;
+  /* min-width: 40px; */
   padding: 0.625rem;
   border-right: 1px solid #e7e4d3;
   font-family: Din Condensed;
   font-size: 0.875rem;
+  background-color: #FFFEF7;
 }
 
 .direction-text {
   padding: 0.625rem;
+  padding-right: 4px;
   border-left: 1px solid #e7e4d3;
   font-size: 1rem;
+  background-color: #FFFEF7;
+}
+
+.currentDirection {
+  border-left: solid 3px #2C3B4B;
 }
 
 /* INPUTS */
