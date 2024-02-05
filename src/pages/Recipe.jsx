@@ -5,7 +5,7 @@ import { RecipeDataContext } from '../App'
 import RecipeCard from '../components/RecipeCard'
 import IngredientsList from '../components/IngredientsList'
 import RecipePageDirections from '../components/RecipePageDirections'
-import GoBackBtn from '../components/goBackBtn'
+import GoBackBtn from '../components/GoBackBtn'
 
 export default function Recipe() {
 
