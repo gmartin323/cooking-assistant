@@ -5,6 +5,7 @@ import { RecipeDataContext } from '../App'
 import RecipeCard from '../components/RecipeCard'
 import IngredientsList from '../components/IngredientsList'
 import RecipePageDirections from '../components/RecipePageDirections'
+import GoBackBtn from '../components/goBackBtn'
 
 export default function Recipe() {
 
@@ -15,8 +16,8 @@ export default function Recipe() {
   const currentRecipe = recipeData.filter((recipe) => recipe.recipeUrl === params.name)[0]
 
   return (
-    <div className='page-container'>
-      
+    <div className='page-container recipe-page'>
+      <GoBackBtn text={"All Recipes"} />
       <RecipeCard recipe={currentRecipe} />
       <IngredientsList ingredients={currentRecipe.ingredients} />
       <RecipePageDirections directions={currentRecipe.steps} />
