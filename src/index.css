@@ -90,7 +90,7 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   margin: 0 1rem;
-  padding: 2rem 2rem;
+  padding: 2rem 1rem;
   background-color: #FFFEF7;
 }
 
@@ -111,7 +111,7 @@ nav a:hover {
 }
 
 .recipe-card {
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   font-family: Din Condensed;
   text-align: center;
 }
@@ -175,6 +175,10 @@ nav a:hover {
 }
 
 /* RECIPE PAGE */
+
+.recipe-page .recipe-card {
+  padding-bottom: 2rem;
+}
 
 .ingredients-list-container {
   display: flex;
@@ -382,6 +386,11 @@ input[type=text]:focus, textarea:focus{
 
 @media screen and (min-width: 550px) {
 
+
+  .page-container {
+    padding: 2rem;
+  }
+
   .recipe-page {
     display: grid;
     grid-template-areas: 
@@ -390,7 +399,7 @@ input[type=text]:focus, textarea:focus{
     ;
     /* grid-template-rows: auto auto auto; */
     column-gap: 3rem;
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
     /* max-height: 90vh; */
   }
 
