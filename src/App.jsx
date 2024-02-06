@@ -10,6 +10,7 @@ const Cupboard = lazy(()=> import ('./pages/Cupboard'))
 
 import Layout from './components/Layout'
 import LoadingSpinner from './components/LoadingSpinner'
+import ScrollToTop from './utilities/scrollToTop'
 import { getRecipes } from './firebase'
 import sortByName from './utilities/sortByName'
 
@@ -48,6 +49,7 @@ export default function App() {
 
   return (
     <HashRouter>
+      <ScrollToTop />
           <Suspense fallback={<div className='page-container'><LoadingSpinner /></div>}>
             <RecipeDataContext.Provider value={recipes}>
               <Routes>
@@ -63,7 +65,7 @@ export default function App() {
               </Routes>
             </RecipeDataContext.Provider>
           </Suspense>
-    </HashRouter>
+      </HashRouter>
   )
 }
 
