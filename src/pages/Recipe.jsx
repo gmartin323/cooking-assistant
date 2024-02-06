@@ -10,10 +10,12 @@ import GoBackBtn from '../components/GoBackBtn'
 export default function Recipe() {
 
   const params = useParams()
-
   const recipeData = React.useContext(RecipeDataContext)
-
   const currentRecipe = recipeData.filter((recipe) => recipe.recipeUrl === params.name)[0]
+
+  React.useState(() => {
+    
+  }, [])
 
   return (
     <div className='page-container recipe-page'>
