@@ -1,28 +1,87 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { RecipeDataContext } from '../App'
+import { useRecipeDataContext } from '../context/recipeDataContext'
 
 import RecipeCard from '../components/RecipeCard'
 import IngredientsList from '../components/IngredientsList'
 import RecipePageDirections from '../components/RecipePageDirections'
 import GoBackBtn from '../components/GoBackBtn'
+import LoadingSpinner from '../components/LoadingSpinner'
+import { getRecipe } from '../firebase'
+
+
+// Recipes are only loaded by context.jsx when the app loads so when the user clicks refresh, the recipes are not loaded
+
+// recipes are loaded on recipeCardContainer page when user refreshes
+
 
 export default function Recipe() {
+  const [currentRecipe, setCurrentRecipe] = React.useState(null)
+  const {id, name} = useParams()
 
-  const params = useParams()
-  const recipeData = React.useContext(RecipeDataContext)
-  const currentRecipe = recipeData.filter((recipe) => recipe.recipeUrl === params.name)[0]
 
-  React.useState(() => {
-    
-  }, [])
+  const { recipes, setRecipes, loading, error } = useRecipeDataContext()
+
+  
+  // console.log("loading", loading)
+  // console.log("recipes", recipes)
+  // console.log("paramsID" , id)
+  // console.log("paramsName" , name)
+  // console.log("currentRecipe" , currentRecipe)
+  
+  /* if(!recipes) {
+    currentRecipe = getRecipe(id)
+  } */
+  
+  React.useEffect(() => {
+
+    /* async function loadRecipe() {
+      // setLoading(true)
+      try {
+        const localData = JSON.parse(localStorage.getItem('items'))
+        if(localData) {
+          setCurrentRecipe(localData)
+        } else {
+          const data = await getRecipe(id)
+          
+          setCurrentRecipe(data)
+          localStorage.setItem('recipes', JSON.stringify(currentRecipe))
+        }
+      } catch (err) {
+        // setError(err)
+      } finally {
+        // setLoading(false)
+      }
+    } */
+
+    setCurrentRecipe(recipes.filter((recipe) => recipe.recipeUrl === name)[0])
+
+    /* async function loadRecipe() {
+      const data = await getRecipe(id)
+      setCurrentRecipe(data)
+    }
+
+    if (recipes) {
+      setCurrentRecipe(recipes.filter((recipe) => recipe.recipeUrl === name)[0])
+      console.log("loaded with context")
+    } else {
+      loadRecipe()
+      console.log("loaded with loadRecipe")
+    } */
+
+  }, [recipes])
 
   return (
+    currentRecipe ? 
     <div className='page-container recipe-page'>
-      <GoBackBtn text={"All Recipes"} />
+      <GoBackBtn location={"/recipes"} text={"All Recipes"} />
       <RecipeCard recipe={currentRecipe} />
       <IngredientsList ingredients={currentRecipe.ingredients} />
       <RecipePageDirections directions={currentRecipe.steps} />
     </div>
+    : 
+    <LoadingSpinner />
   )
+  
+
 }

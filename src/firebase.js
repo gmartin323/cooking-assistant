@@ -1,7 +1,7 @@
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore, collection, getDocs, getDoc } from "firebase/firestore/lite"
+import { getFirestore, collection, getDocs, getDoc, doc } from "firebase/firestore/lite"
 
 const firebaseConfig = {
   apiKey: "AIzaSyB7XTxeWUyRr-aE8hHFrSj-bD8iks2-S0s",
@@ -27,4 +27,13 @@ export async function getRecipes() {
     id: doc.id
   }))
   return recipes
+}
+
+export async function getRecipe(id) {
+  const docRef = doc(db, "recipes", id)
+  const recipeSnapshot = await getDoc(docRef)
+  return {
+      ...recipeSnapshot.data(),
+      id: recipeSnapshot.id    
+  }
 }

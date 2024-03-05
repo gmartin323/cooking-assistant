@@ -1,14 +1,22 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
-export default function GoBackBtn( {text} ) {
+export default function GoBackBtn( {location, text} ) {
 
   const navigate = useNavigate()
 
-  return (
-    <a 
+  // prev link that didn't navigate when user didn't previously navigate to page
+
+  {/* <a 
       className='back-btn'
       onClick={() => navigate(-1)}
+  > */} 
+
+  return (
+    
+    <Link 
+      to={location}
+      className='back-btn'
     >
       <i 
         className="fa-solid fa-chevron-left"
@@ -17,6 +25,7 @@ export default function GoBackBtn( {text} ) {
           paddingRight: '2px'
         }} />
       {text}
-    </a>
+    </Link>
+    
   )
 }
