@@ -2,7 +2,7 @@ import React from "react"
 
 export default function RecipeCard( { recipe } ) {
 
-  const { name, imageurl, extra_info, preparation_time, cooking_time, serves } = recipe 
+  const { name, imageurl, extra_info, preparation_time, cooking_time, serves, author, link } = recipe 
 
   return (
     

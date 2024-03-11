@@ -22,6 +22,10 @@ export default function Recipe() {
 
   const { recipes, setRecipes, loading, error } = useRecipeDataContext()
 
+  const timeElapsed = Date.now()
+  const myDate = new Date(timeElapsed)
+  const today = myDate.getDate() + ' ' + myDate.toLocaleString('en-GB', { month: "short" }) + ' ' + myDate.getFullYear()
+  
   
   // console.log("loading", loading)
   // console.log("recipes", recipes)
@@ -75,7 +79,23 @@ export default function Recipe() {
     currentRecipe ? 
     <div className='page-container recipe-page'>
       <GoBackBtn location={"/recipes"} text={"All Recipes"} />
-      <RecipeCard recipe={currentRecipe} />
+      <section className='recipe-card-section'>
+        <RecipeCard recipe={currentRecipe} />
+        <div className='recipe-info'>
+          {currentRecipe.added ? 
+          <p className='recipe-added-on'>
+            Added {currentRecipe.added.substring(4, 15)}
+          </p> 
+          : <p></p>}
+          {currentRecipe.author ? 
+          <p className='recipe-author'>
+            Recipe by: <a href={currentRecipe.link} target="_blank"> {currentRecipe.author}</a>
+          </p> 
+          :<p></p>
+          }
+        </div>
+      </section>
+      
       <IngredientsList ingredients={currentRecipe.ingredients} />
       <RecipePageDirections directions={currentRecipe.steps} />
     </div>

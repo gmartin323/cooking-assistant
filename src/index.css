@@ -177,7 +177,27 @@ nav a:hover {
 /* RECIPE PAGE */
 
 .recipe-page .recipe-card {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.recipe-info {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 1rem;
+  padding-bottom: 1rem;
+  font-size: 0.875rem;
+  font-family: 'Din Condensed';
+  color: #1A2D40;
+}
+
+.recipe-author {
+  text-decoration: none;
+  
+}
+
+.recipe-author a:visited {
+  color: #2C3B4B;
 }
 
 .ingredients-list-container {
@@ -237,6 +257,7 @@ nav a:hover {
   text-transform: lowercase;
   font-size: 0.75rem; 
 }
+
 
 /* RECIPE-PAGE-DIRECTIONS */
 
@@ -390,7 +411,7 @@ input[type=text]:focus, textarea:focus{
 }
 
 
-@media screen and (min-width: 551px) {
+@media screen and (min-width: 768px) {
 
 
   .page-container {
@@ -400,25 +421,28 @@ input[type=text]:focus, textarea:focus{
   .recipe-page {
     display: grid;
     grid-template-areas: 
-      "back . ."
-      "card ingredients directions"
+      "back ."
+      "card ingredients"
+      "directions directions"
     ;
     /* grid-template-rows: auto auto auto; */
     column-gap: 3rem;
-    padding: 2rem 2rem;
+    row-gap: 1rem;
+    padding: 1rem 2rem;
     /* max-height: 90vh; */
   }
 
-  .recipe-page .recipe-card {
+  .recipe-page .recipe-card-section {
     min-width: 260px;
     max-width: 460px;
+    justify-self: center;
   }
   
   .back-btn {
     grid-area: back;
   }
 
-  .recipe-card {
+  .recipe-card-section {
     grid-area: card;
   }
 
@@ -443,4 +467,17 @@ input[type=text]:focus, textarea:focus{
     font-size: 1.1rem;
   }
 
+  .recipe-info {
+    grid-area: info;
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+  .recipe-page {
+    grid-template-areas: 
+      "back . ."
+      "card ingredients directions"
+    ;
+  }
 }
