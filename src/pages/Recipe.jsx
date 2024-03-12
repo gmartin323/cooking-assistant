@@ -9,12 +9,6 @@ import GoBackBtn from '../components/GoBackBtn'
 import LoadingSpinner from '../components/LoadingSpinner'
 import { getRecipe } from '../firebase'
 
-
-// Recipes are only loaded by context.jsx when the app loads so when the user clicks refresh, the recipes are not loaded
-
-// recipes are loaded on recipeCardContainer page when user refreshes
-
-
 export default function Recipe() {
   const [currentRecipe, setCurrentRecipe] = React.useState(null)
   const {id, name} = useParams()
@@ -25,17 +19,6 @@ export default function Recipe() {
   const timeElapsed = Date.now()
   const myDate = new Date(timeElapsed)
   const today = myDate.getDate() + ' ' + myDate.toLocaleString('en-GB', { month: "short" }) + ' ' + myDate.getFullYear()
-  
-  
-  // console.log("loading", loading)
-  // console.log("recipes", recipes)
-  // console.log("paramsID" , id)
-  // console.log("paramsName" , name)
-  // console.log("currentRecipe" , currentRecipe)
-  
-  /* if(!recipes) {
-    currentRecipe = getRecipe(id)
-  } */
   
   React.useEffect(() => {
 

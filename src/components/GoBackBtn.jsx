@@ -22,7 +22,7 @@ export default function GoBackBtn( {location, text} ) {
         className="fa-solid fa-chevron-left"
         style={{
           fontSize: '0.55rem',
-          paddingRight: '2px'
+          paddingRight: '2px',
         }} />
       {text}
     </Link>

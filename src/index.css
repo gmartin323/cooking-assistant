@@ -77,11 +77,12 @@ nav a:hover {
 }
 
 .back-btn {
-  text-decoration: underline;
-  padding-bottom: 1rem;
+  width: max-content;
+  padding: 8px 8px 1rem 0;
   font-size: 0.875rem;
   color: #2C3B4B;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 /* PAGES */
@@ -184,7 +185,6 @@ nav a:hover {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  margin: 0 1rem;
   padding-bottom: 1rem;
   font-size: 0.875rem;
   font-family: 'Din Condensed';
@@ -232,7 +232,6 @@ nav a:hover {
   width: 100%;
   column-gap: 5px;
   border-bottom: 1px solid #e7e4d3;
-  
 }
 
 .ingredient-quantity {
@@ -440,6 +439,7 @@ input[type=text]:focus, textarea:focus{
   
   .back-btn {
     grid-area: back;
+    padding: 8px 8px 8px 0;
   }
 
   .recipe-card-section {

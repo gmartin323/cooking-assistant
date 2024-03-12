@@ -27,7 +27,6 @@ export default function RecipeDataContextProvider({ children }) {
         setLoading(false)
       }
     }
-    console.log("contextData is reloading")
     loadRecipes()
     
   }, [])
