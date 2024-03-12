@@ -11,10 +11,6 @@ export default function Recipes() {
   // const [searchParam] = React.useState(["name", "extra_info", "author"]) // PROBLEM WHEN USING INGREDIENTS/AUTHOR SEARCHPARAM
   const [searchParam] = React.useState(["name", "extra_info"])
 
-  // const filteredRecipes = recipes.filter(recipe => {
-  //   recipe.ingredients.includes()
-  // })
-
   function search(items, setItems) {
     setItems(
       items.filter((item) => {
@@ -38,15 +34,8 @@ export default function Recipes() {
     search(recipes, setFilteredRecipes)
   }, [searchQuery])
 
-  console.log(searchQuery)
-  console.log('filtered', filteredRecipes)
-  console.log('recipes', recipes)
-
   return (
       <div className='page-container'>
-        {/* <h1 className="page-heading">Recipes</h1> */}
-
-
         <div className="search-wrapper" style={{padding: "2rem"}}>
           <label htmlFor="search-form">
               <input
@@ -58,7 +47,6 @@ export default function Recipes() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
               />
-              {/* <span className="sr-only">Search countries here</span> */}
           </label>
         </div>
 

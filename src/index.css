@@ -191,13 +191,13 @@ nav a:hover {
   color: #1A2D40;
 }
 
-.recipe-author {
-  text-decoration: none;
-  
+.recipe-author a{
+  /* text-decoration: none; */
+  color: #2C3B4B;
 }
 
 .recipe-author a:visited {
-  color: #2C3B4B;
+  color: #1A2D40;
 }
 
 .ingredients-list-container {
