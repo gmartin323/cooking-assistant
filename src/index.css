@@ -105,6 +105,30 @@ nav a:hover {
 
 /* RECIPES PAGE */
 
+.search-form-wrapper {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  max-width: 560px;
+}
+
+.search-input {
+  grid-area: search;
+  height: 3rem;
+  /* max-width: 260px; */
+  padding: 0px 12px;
+  border-radius: 0px;
+  border: 1px solid #2C3B4B;
+  background-color: #FFFEF7;
+  font-size: 1rem;
+  font-family: 'Din Condensed', sans-serif;
+}
+
+.filter-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .recipe-card-container {
   display: grid;
   gap: 2rem;
@@ -405,6 +429,10 @@ input[type=text]:focus, textarea:focus{
   .page-container {
     padding: 1rem 1rem;
     margin: 1rem 1rem;
+  }
+
+  .search-form-wrapper {
+    flex-direction: column;
   }
   
 }

@@ -36,18 +36,26 @@ export default function Recipes() {
 
   return (
       <div className='page-container'>
-        <div className="search-wrapper" style={{padding: "2rem"}}>
-          <label htmlFor="search-form">
-              <input
-                  type="search"
-                  name="search-form"
-                  id="search-form"
-                  className="search-input"
-                  placeholder="Search for..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-              />
-          </label>
+        <div className="search-form-wrapper">
+          <input
+              type="search"
+              name="search-form"
+              id="search-form"
+              className="search-input"
+              placeholder="Search Recipes"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+          />
+          <div className='filter-wrapper'>
+            <input
+              type="search"
+              className="search-input"
+            />
+            <input
+              type="search"
+              className="search-input"
+            />
+          </div>
         </div>
 
 
