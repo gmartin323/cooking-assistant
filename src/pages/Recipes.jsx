@@ -34,6 +34,10 @@ export default function Recipes() {
     search(recipes, setFilteredRecipes)
   }, [searchQuery])
 
+  // filter categories
+
+  
+
   return (
       <div className='page-container'>
         <div className="search-form-wrapper">
@@ -46,16 +50,10 @@ export default function Recipes() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <div className='filter-wrapper'>
-            <input
-              type="search"
-              className="search-input"
-            />
-            <input
-              type="search"
-              className="search-input"
-            />
-          </div>
+          <input
+            type="checkbox"
+            className="filter-input"
+          />
         </div>
 
 

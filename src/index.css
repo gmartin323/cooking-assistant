@@ -107,26 +107,33 @@ nav a:hover {
 
 .search-form-wrapper {
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1rem;
-  max-width: 560px;
+  /* max-width: 560px; */
 }
 
 .search-input {
-  grid-area: search;
-  height: 3rem;
-  /* max-width: 260px; */
+  height: 2.6rem;
+  max-width: 400px;
+
   padding: 0px 12px;
   border-radius: 0px;
-  border: 1px solid #2C3B4B;
+  border: 1px solid #e7e4d3;
   background-color: #FFFEF7;
   font-size: 1rem;
   font-family: 'Din Condensed', sans-serif;
+  flex: 2 0 auto;
 }
 
-.filter-wrapper {
-  display: flex;
-  justify-content: space-between;
+.filter-input {
+  height: 2.6rem;
+  border-radius: 0px;
+  border: 1px solid #e7e4d3;
+  background-color: #FFFEF7;
+  /* margin-left: auto; */
+  margin-right: 0;
+  flex-grow: 0;
 }
 
 .recipe-card-container {
@@ -411,6 +418,17 @@ input[type=text]:focus, textarea:focus{
 
 /* MEDIA QUERIES */
 
+/* @media screen and (max-width: 420px) {
+  .search-form-wrapper {
+    flex-direction: column;
+  }
+
+  .filter-input {
+    margin-left: 0;
+    margin-right: auto;
+  }
+} */
+
 @media screen and (max-width: 550px) {
   header {
     flex-direction: column;
@@ -431,9 +449,7 @@ input[type=text]:focus, textarea:focus{
     margin: 1rem 1rem;
   }
 
-  .search-form-wrapper {
-    flex-direction: column;
-  }
+  
   
 }
 
