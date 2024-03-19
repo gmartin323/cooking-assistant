@@ -1,4 +1,5 @@
 import React from 'react'
+import Select from 'react-select';
 import { useRecipeDataContext } from "../context/recipeDataContext";
 import RecipeCardContainer from '../components/RecipeCardContainer'
 
@@ -35,13 +36,24 @@ export default function Recipes() {
   }, [searchQuery])
 
   // filter categories
+    // total time
+    //    -> 30mins or less
+    
+    // ratio of owned ingredients 
+    //    -> all ingredients
+    //    -> missing one or two
+    //    -> many missing 
 
-  
+
 
   return (
       <div className='page-container'>
         <div className="search-form-wrapper">
-          <input
+          <div>
+            <span className='search-input-icon'>
+            <i className="fas fa-search fa-xs" style={{color: "rgba(77, 77, 77, 0.25)"}}></i>
+            </span>
+            <input
               type="search"
               name="search-form"
               id="search-form"
@@ -49,11 +61,14 @@ export default function Recipes() {
               placeholder="Search Recipes"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-          />
-          <input
-            type="checkbox"
+            />
+          </div>
+          {/* <input
+            type="search" 
             className="filter-input"
-          />
+            placeholder="Filter Recipes"
+          /> */}
+          <Select options={recipes}></Select>
         </div>
 
 

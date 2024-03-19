@@ -111,29 +111,56 @@ nav a:hover {
   gap: 1rem;
   margin-bottom: 1rem;
   /* max-width: 560px; */
+  /* flex-direction: column; */
+}
+
+.search-input-wrapper {
+  position: relative;
+}
+
+.search-input-icon {
+  position: absolute;
+  line-height: 2.6rem;
+  padding: 2px;
+  padding-left: 9px;
+  /* z-index: -1; */
 }
 
 .search-input {
   height: 2.6rem;
-  max-width: 400px;
+  max-width: 300px;
 
-  padding: 0px 12px;
+  padding: 0px 28px;
   border-radius: 0px;
-  border: 1px solid #e7e4d3;
+  border: 1px solid rgba(77, 77, 77, 0.15);
   background-color: #FFFEF7;
+  color:#2C3B4B;
   font-size: 1rem;
   font-family: 'Din Condensed', sans-serif;
-  flex: 2 0 auto;
+  flex-grow: 2;
+  width: 100%;
+  /* min-width: 60%; */
 }
 
 .filter-input {
   height: 2.6rem;
   border-radius: 0px;
-  border: 1px solid #e7e4d3;
-  background-color: #FFFEF7;
-  /* margin-left: auto; */
-  margin-right: 0;
-  flex-grow: 0;
+  border: 2px solid #2C3B4B;
+  background-color: #2C3B4B;
+  font-size: 1rem;
+  font-family: 'Din Condensed', sans-serif;
+  /* flex-grow: 0; */
+  max-width: 30%;
+  min-width: 115px;
+  text-align: center;
+}
+
+.search-input::placeholder {
+  color: rgba(77, 77, 77, 0.25);
+}
+
+.filter-input::placeholder {
+  color: #D7DCDE;
 }
 
 .recipe-card-container {
@@ -416,9 +443,50 @@ input[type=text]:focus, textarea:focus{
   display: cover;
 }
 
+/* SEARCH  */
+
+/* input[type="search"] {
+  border: 1px solid gray;
+  padding: .2em .4em;
+  border-radius: .2em;
+} */
+
+/* input[type="search"].dark {
+  background: #222;
+  color: #fff;
+} */
+
+/* input[type="search"].light {
+  background: #fff;
+  color: #222;
+} */
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 50em;
+  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+  margin-top: 1px; 
+  margin-right: -20px;
+  /* background-color: #2C3B4B; */
+}
+
+input[type="search"]:focus::-webkit-search-cancel-button {
+  opacity: .3;
+  pointer-events: all;
+}
+
+input[type="search"].dark::-webkit-search-cancel-button {
+  filter: invert(1);
+}
+
 /* MEDIA QUERIES */
 
-/* @media screen and (max-width: 420px) {
+@media screen and (max-width: 374px) {
   .search-form-wrapper {
     flex-direction: column;
   }
@@ -427,7 +495,7 @@ input[type=text]:focus, textarea:focus{
     margin-left: 0;
     margin-right: auto;
   }
-} */
+}
 
 @media screen and (max-width: 550px) {
   header {
