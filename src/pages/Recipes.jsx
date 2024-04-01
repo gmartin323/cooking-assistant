@@ -53,11 +53,11 @@ export default function Recipes() {
             <Select 
               options={recipes}
               className="filter-input"
-            ></Select>
+            ></Select> 
           </div>
           <div className='search-input-wrapper'>
             <span className='search-input-icon'>
-            <i className="fas fa-search fa-xs" style={{color: "rgba(77, 77, 77, 0.25)"}}></i>
+            <i className="fas fa-search fa-xs" style={{color: "rgba(77, 77, 77, 0.45)"}}></i>
             </span>
             <input
               type="search"

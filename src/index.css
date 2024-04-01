@@ -141,7 +141,6 @@ nav a:hover {
   line-height: 2.6rem;
   padding: 2px;
   padding-left: 9px;
-  color: red;
   /* z-index: -1; */
 }
 
@@ -149,7 +148,7 @@ nav a:hover {
   height: 2.6rem;
   /* max-width: 300px; */
 
-  padding: 0px 6px 0px 28px;
+  padding: 0px 3px 0px 28px;
   border-radius: 0px;
   border: 1px solid rgba(77, 77, 77, 0.15);
   background-color: #FFFEF7;
@@ -471,16 +470,16 @@ input[type=text]:focus, textarea:focus{
 
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
-  height: 1em;
-  width: 1em;
-  border-radius: 50em;
-  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
-  background-size: contain;
+  height: 1.33rem;
+  width: 1.33rem;
+  /* padding: 20px; */
+  /* border-radius: 50em; */
+  background: url(.\assets\svg\xmark-solid.svg) no-repeat 50% 50%;
   opacity: 0;
   pointer-events: none;
-  margin-top: 1px; 
-  margin-right: -20px;
-  /* background-color: #2C3B4B; */
+  border: 6px #fffef7 solid;
+  /* border-bottom: 6px inherit solid; */
+  /* color: #2C3B4B; */
 }
 
 input[type="search"]:focus::-webkit-search-cancel-button {
