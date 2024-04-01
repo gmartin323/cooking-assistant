@@ -49,7 +49,13 @@ export default function Recipes() {
   return (
       <div className='page-container'>
         <div className="search-form-wrapper">
-          <div>
+          <div className='filter-input-wrapper'>
+            <Select 
+              options={recipes}
+              className="filter-input"
+            ></Select>
+          </div>
+          <div className='search-input-wrapper'>
             <span className='search-input-icon'>
             <i className="fas fa-search fa-xs" style={{color: "rgba(77, 77, 77, 0.25)"}}></i>
             </span>
@@ -68,7 +74,6 @@ export default function Recipes() {
             className="filter-input"
             placeholder="Filter Recipes"
           /> */}
-          <Select options={recipes}></Select>
         </div>
 
 
