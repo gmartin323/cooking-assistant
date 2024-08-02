@@ -17,12 +17,12 @@ export default function RecipeCardContainer({recipes}) {
           {recipes.map((recipe) => {
             return (
               <Link 
-              to={`/recipes/${recipe.recipeUrl}/${recipe.id}`}
-              aria-label={`View ${recipe.name} recipe`}
-              className='recipe-card-link'
-              key={recipe.id}
+                to={`/recipes/${recipe.recipeUrl}/${recipe.id}`}
+                aria-label={`View ${recipe.name} recipe`}
+                className='recipe-card-link'
+                key={recipe.id}
               >
-                <RecipeCard recipe={recipe}/>
+              <RecipeCard recipe={recipe}/>
               </Link>
             )
           })}
